@@ -1,0 +1,41 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "HackGen35Nerd, Menlo, Monaco, 'Courier New', monospace",
+    "cSpell.userWords": [
+        "aarch",
+        "Brewfile",
+        "devbase",
+        "Dnsmasq",
+        "eisuu",
+        "errorlens",
+        "esac",
+        "hadolint",
+        "homnebrew",
+        "Karabiner",
+        "markdownlint",
+        "mkdir",
+        "mktemp",
+        "monospace",
+        "nameserver",
+        "plutil",
+        "RECVFROM",
+        "reuseaddr",
+        "shellcheck",
+        "shellenv",
+        "socat",
+        "Traefik",
+        "udptunnel"
+    ],
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 12,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.rightClickBehavior": "copyPaste"
+}
