@@ -159,7 +159,8 @@
           "from": {
             "key_code": "left_arrow",
             "modifiers": {
-              "mandatory": "command"
+              "mandatory": "command",
+              "optional": "any"
             }
           },
           "to": {
@@ -174,7 +175,8 @@
           "from": {
             "key_code": "right_arrow",
             "modifiers": {
-              "mandatory": "command"
+              "mandatory": "command",
+              "optional": "any"
             }
           },
           "to": {
@@ -265,6 +267,51 @@
             "key_code": "international3",
             "modifiers": [
               "option"
+            ]
+          },
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "ウィンドウ切り替え (command + tab, option + tab)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": [
+                "shift"
+              ]
+            }
+          },
+          "to": {
+            "key_code": "tab",
+            "modifiers": [
+              "control"
+            ]
+          },
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ],
+              "optional": [
+                "shift"
+              ]
+            }
+          },
+          "to": {
+            "key_code": "tab",
+            "modifiers": [
+              "command"
             ]
           },
           "type": "basic"

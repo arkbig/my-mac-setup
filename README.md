@@ -20,12 +20,15 @@
 2. システム環境設定 > キーボード
    1. キーのリピート`Mac`
    2. リピート入力認識までの時間`最短`
+   3. ショートカット
+      1. キーボード > 次のウィンドウを操作対象にする `command + option + tab`
 3. Karabiner
    1. Devices > 全チェック
 4. システム環境設定 > キーボード > ショートカット
    1. Launchpadを表示 `Control + R`
-   2. 入力ソース　`チェックはずす`
-   3. Spotlight `Control + SP`
+   2. Mission Control デスクトップ表示 `Control + D`
+   3. 入力ソース　`チェックはずす`
+   4. Spotlight `Control + SP`
 5. Homebrew
    1. Install from site command
    2. `eval "$(/opt/homebrew/bin/brew shellenv)"`
@@ -54,6 +57,7 @@
     2. ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
     3. `shell command: install`
     4. `~/.config/vscode/install-extensions.sh`
+    5. delete shortcut `command + option + tab`
 
 ## バックアップ
 

@@ -24,6 +24,7 @@
         "mktemp",
         "monospace",
         "nameserver",
+        "pccs",
         "plutil",
         "RECVFROM",
         "reuseaddr",
@@ -37,5 +38,6 @@
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 12,
     "terminal.integrated.copyOnSelection": true,
-    "terminal.integrated.rightClickBehavior": "copyPaste"
+    "terminal.integrated.rightClickBehavior": "copyPaste",
+    "editor.renderWhitespace": "boundary"
 }

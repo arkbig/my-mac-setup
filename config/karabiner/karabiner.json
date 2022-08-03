@@ -154,41 +154,6 @@
                         ]
                     },
                     {
-                        "description": "単語移動 | command + ←/→",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "mandatory": "command"
-                                    }
-                                },
-                                "to": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": [
-                                        "option"
-                                    ]
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": {
-                                        "mandatory": "command"
-                                    }
-                                },
-                                "to": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": [
-                                        "option"
-                                    ]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "ブラウザ 戻る/進む | mouse 4/5",
                         "manipulators": [
                             {
@@ -310,6 +275,88 @@
                                 },
                                 "to": {
                                     "key_code": "international3",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "ウィンドウ切り替え (command + tab, option + tab)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ],
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "tab",
+                                    "modifiers": [
+                                        "control"
+                                    ]
+                                },
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ],
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "tab",
+                                    "modifiers": [
+                                        "command"
+                                    ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "単語移動 | command + ←/→",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": {
+                                        "mandatory": "command",
+                                        "optional": "any"
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "mandatory": "command",
+                                        "optional": "any"
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "right_arrow",
                                     "modifiers": [
                                         "option"
                                     ]

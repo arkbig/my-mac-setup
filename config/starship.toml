@@ -1,124 +1,60 @@
+# Get editor completions based on the config schema
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline=true
+
+#https://www.nerdfonts.com/cheat-sheet
 format = """
-[](162)\
-$username\
-[](bg:124 fg:162)\
-$directory\
-[](fg:124 bg:167)\
-$git_branch\
-$git_status\
-[](fg:167 bg:123)\
-$c\
-$elixir\
-$elm\
-$golang\
-$haskell\
-$java\
-$julia\
-$nodejs\
-$nim\
-$rust\
-[](fg:123 bg:73)\
-$docker_context\
-[](fg:73 bg:81)\
-$time\
-[ ](fg:81)\
-"""
+$directory[](fg:29 bg:24)\
+$git_branch$git_status[](fg:24 bg:60)\
+$time[](fg:60 bg:black)\
+$fill [﬌](fg:239)$status$memory_usage$cmd_duration[﬋](fg:239)\
+$all"""
 
-# Disable the blank line at the start of the prompt
-# add_newline = false
+[character]
+success_symbol="[](fg:29)"
+error_symbol="[✘](fg:124)"
 
-# You can also replace your username with a neat symbol like  to save some space
-[username]
-show_always = true
-style_user = "bg:162"
-style_root = "bg:162"
-format = '[$user ]($style)'
+[cmd_duration]
+min_time=0
+show_milliseconds=true
+format="[ $duration]($style)"
+style="fg:60"
 
 [directory]
-style = "bg:124"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+truncation_length=7
+truncation_symbol="/"
+truncate_to_repo=false
+format="[$read_only]($read_only_style)[$path]($style)"
+style="fg:252 bg:29"
+repo_root_format="[$read_only]($read_only_style)[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)"
+repo_root_style="underline fg:252 bg:29"
 
-# Here is how you can shorten some long paths by text replacement
-# similar to mapped_locations in Oh My Posh:
-[directory.substitutions]
-"Documents" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-# Keep in mind that the order matters. For example:
-# "Important Documents" = "  "
-# will not be replaced, because "Documents" was already substituted before.
-# So either put "Important Documents" before "Documents" or use the substituted version:
-# "Important  " = "  "
-
-[c]
-symbol = " "
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
-
-[docker_context]
-symbol = " "
-style = "bg:73"
-format = '[[ $symbol $context ](bg:73)]($style) $path'
-
-[elixir]
-symbol = " "
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
-
-[elm]
-symbol = " "
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
+[fill]
+symbol="─"
+style="fg:239"
 
 [git_branch]
-symbol = ""
-style = "bg:167"
-format = '[[ $symbol $branch ](bg:167)]($style)'
+format="[$symbol$branch(:$remote_branch)]($style)"
+style="underline fg:252 bg:24"
 
 [git_status]
-style = "bg:167"
-format = '[[($all_status$ahead_behind )](bg:167)]($style)'
+format="([ $all_status$ahead_behind]($style))"
+style="fg:252 bg:24"
 
-[golang]
-symbol = " "
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
+[memory_usage]
+# threshold=0
+format="$symbol[${ram}(, ${swap})]($style) "
+disabled=false
 
-[haskell]
-symbol = " "
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
-
-[java]
-symbol = " "
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
-
-[julia]
-symbol = " "
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
-
-[nim]
-symbol = " "
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:123"
-format = '[[ $symbol ($version) ](bg:123)]($style)'
+[status]
+disabled=false
+symbol="✘"
+style="fg:124"
+pipestatus=true
 
 [time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:81"
-format = '[[ ♥ $time ](bg:81)]($style)'
+disabled=false
+format="[ $time]($style)"
+style="dimmed fg:252 bg:60"
+time_format="%R(%a)"
