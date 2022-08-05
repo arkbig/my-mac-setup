@@ -10,7 +10,7 @@
 2. Apple IDでサインイン
 3. `git clone https://github.com/arkbig/my-mac-setup.git proj/my-mac-setup`
    1. 初回はコマンドラインツールのインストールが始まる
-4. `ln -s proj/my-mac-setup/config .config`
+4. `proj/my-mac-setup/mkln.sh`
 
 ## 手動設定
 
@@ -43,21 +43,17 @@
       4. [devbase使用方法](https://zenn.dev/arkbig/books/devbase-2022_b1b24e6e8db350a1f7f379af3833e90d79ad5/viewer/conclusion)
 7. Terminal
    1. プロファイルを読み込む `~/.config/terminal/Big.terminal`
-8. zsh
-   1. `ln -s ~/.config/zsh/.zshrc .zshrc`
-   2. `ln -s ~/.config/zsh/.zprofile .zprofile`
-9. OneDrive
+8. OneDrive
    1. Install from site download
 
-10. Chrome
+9. Chrome
     1. Install from site download
 
-11. VS Code
+10. VS Code
     1. Install from site download
-    2. ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-    3. `shell command: install`
-    4. `~/.config/vscode/install-extensions.sh`
-    5. delete shortcut `command + option + tab`
+    2. `shell command: install`
+    3. `~/.config/vscode/install-extensions.sh`
+    4. delete shortcut `command + option + tab`
 
 ## バックアップ
 

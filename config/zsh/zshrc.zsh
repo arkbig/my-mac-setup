@@ -1,7 +1,10 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
+eval "$(starship init zsh)"
+source ~/.config/broot/launcher/bash/br
 eval "$(zoxide init zsh)"
 
-source ~/.config/broot/launcher/bash/br
+#----------------------------------------
+export EDITOR=kak
 
-eval "$(starship init zsh)"
+#----------------------------------------
+alias cat='bat --paging=never'
+alias less='bat'
