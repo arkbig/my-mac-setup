@@ -3,9 +3,16 @@ chrmarti.regex
 DavidAnson.vscode-markdownlint
 exiasr.hadolint
 foxundermoon.shell-format
+GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 humao.rest-client
 johnpapa.vscode-peacock
+mechatroner.rainbow-csv
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
