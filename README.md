@@ -62,3 +62,7 @@
 ~/.config/backup.sh
 (cd proj/my-mac-setup && git add . && git commit)
 ```
+
+## TODO
+
+fzfを使ったhistory検索がいまいちなら、mcfly(historyをSQLiteに保存してディレクトリとか見てランキング検索)を使ってみる。

@@ -16,18 +16,20 @@ alias ..2=cd ../..
 alias ..3=cd ../../..
 alias ..4=cd ../../../..
 alias ..5=cd ../../../../..
+alias ch='cheat'
 alias cat='bat --paging=never'
 alias df='duf'
 alias diff='delta'
 alias du='dust'
 alias find='fd'
 alias grep='rg'
-alias h='fc -lt '%F %T' 1'
 alias less='bat'
 alias ll='lsd -Ahl --total-size --group-dirs=last'
 alias lr='lsd -Ahl --total-size --tree --group-dirs=last'
 alias ls='lsd -A --group-dirs=last'
 alias mkdir='mkdir -p'
+alias ps='procs --tree'
+alias top='btm'
 alias tree='lsd -A --tree --group-dirs=last'
 alias vi='kak'
 jgrep() { gron | grep $* | gron -u }
@@ -51,7 +53,7 @@ setopt share_history
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
 function select-history() {
-    BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+    BUFFER=$(history -Dinr 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
     CURSOR=$#BUFFER
 }
 zle -N select-history
