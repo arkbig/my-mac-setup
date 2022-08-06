@@ -21,7 +21,8 @@
    1. キーのリピート`Mac`
    2. リピート入力認識までの時間`最短`
    3. ショートカット
-      1. キーボード > 次のウィンドウを操作対象にする `command + option + tab`
+      1. Launchpad > Launchpadを表示を無効
+      2. キーボード > 次のウィンドウを操作対象にする `command + option + tab`
 3. Karabiner
    1. Devices > 全チェック
 4. システム環境設定 > キーボード > ショートカット
