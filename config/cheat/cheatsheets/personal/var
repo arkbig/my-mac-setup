@@ -1,0 +1,27 @@
+# Get default when undefined.
+${var-def}, also empty ${var:-def}
+# Set default when undefined.
+${var=def}, also empty ${var:=def}
+
+# Error when undefined.
+${var?msg}, also empty ${var:?msg}
+
+# Get word when defined.
+${var+word}, also empty ${var:+word}
+
+# Length
+${#var}
+
+# Trim start (shortest)
+${/a/b/c#*/} => a/b/c
+# Trim start {longest)
+${/a/b/c##*/} => c
+
+# Trim end (shotest)
+${/a/b/c%/*} => /a/b
+# Trim end (longest)
+${/a/b/c%%/*} => (empty)
+
+# Replace - NOT POSIX (bash)
+${var/pattern/str}, also all ${var//pattern/str}
+
