@@ -245,45 +245,6 @@
                         ]
                     },
                     {
-                        "description": "¥ ⇔ \\",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "international3",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": {
-                                    "key_code": "international3"
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "international3",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": {
-                                    "key_code": "international3",
-                                    "modifiers": [
-                                        "option"
-                                    ]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "ウィンドウ切り替え (command + tab, option + tab)",
                         "manipulators": [
                             {
