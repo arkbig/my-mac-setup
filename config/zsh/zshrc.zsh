@@ -1,23 +1,3 @@
-# ######################################################################
-# Install app
-
-# プロンプトカスタマイズ 
-eval "$(starship init zsh)"
-
-# cd 履歴からいい感じに移動
-# bindkey j hoge OR 検索 ji
-# https://news.mynavi.jp/techplus/article/techp5607/
-# "^[[0n"クエリステータスレポート（返答）らしいけどなんだろう？
-# bindkey "^[[0n" __zoxide_z_complete_helper
-eval "$(zoxide init --cmd j zsh)"
-
-# うっすら補完を表示
-# → or End accept suggestion
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# コマンド入力中にシンタックスハイライト
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 ######################################################################
 # general
 
@@ -196,7 +176,6 @@ zle -N run-cheat
 
 ######################################################################
 # 入力
-# optionをメタキーにせずそのままとし、特殊文字に必要なショートカットを割り当てる
 
 # Tabはメニュー補完、option-iはbashっぽい補完（連番ファイル選択時に便利）
 bindkey '^i' menu-complete-and-select # Tab
@@ -207,6 +186,8 @@ bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
 bindkey '^r' accept-history
 bindkey '^s' select-history # TODO: menuselectの"^j"と"^m"みたいに確定キーで切り替えたい 
+
+# optionをメタキーにせずそのままとし、特殊文字に必要なショートカットを割り当てる
 
 # 単語単位
 bindkey '∫' backward-word  # option-b
@@ -243,3 +224,25 @@ autoload -Uz select-word-style
 select-word-style default
 zstyle ':zle:*' word-chars " &+,/:=@{|}"
 zstyle ':zle:*' word-style unspecified
+
+# ######################################################################
+# Install app
+# 他の設定を書き換えることがあるので、最後に記載する。
+# 　select-word-styleがzsh-syntax-highlightingの後だと効かないのを確認済み。
+
+# プロンプトカスタマイズ 
+eval "$(starship init zsh)"
+
+# cd 履歴からいい感じに移動
+# bindkey j hoge OR 検索 ji
+# https://news.mynavi.jp/techplus/article/techp5607/
+# "^[[0n"クエリステータスレポート（返答）らしいけどなんだろう？
+# bindkey "^[[0n" __zoxide_z_complete_helper
+eval "$(zoxide init --cmd j zsh)"
+
+# うっすら補完を表示
+# → or End accept suggestion
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# コマンド入力中にシンタックスハイライト
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
