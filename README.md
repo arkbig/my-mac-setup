@@ -23,21 +23,35 @@
    1. キーのリピート`Mac`
    2. リピート入力認識までの時間`最短`
    3. ショートカット
-      1. キーボード > 次のウィンドウを操作対象にする `command + option + tab`
-      2. Mission Control デスクトップ表示 `Control + D`
-      3. 入力ソース　`チェックはずす`
-      4. Spotlight `Control + SP`
+      1. Launchpad Dockを自動的に表示/非表示のオン/オフ `チェックはずす`
+      2. ディスプレイの明度を下げる & 上げる　`チェックはずす`
+      3. Mission Control > アプリケーションのウィンドウ `^↓`だけ残し`チェックはずす`
+      4. キーボード
+         1. 次のウィンドウを操作対象にする `command + option + tab`
+         2. 他は`チェックはずす`
+      5. 入力ソース　`チェックはずす`
+      6. スクリーンショット　`チェックはずす`
+      7. サービス　`チェックはずす`
+      8. Spotlight `Control + SP`
+         1. 他は　`チェックはずす`
+      9. アクセシビリティ　`チェックはずす`
+      10. アプリケーション　`チェックはずす`
    4. 入力ソース
       1. 日本語
           1. 入力モード: "英字"チェック
           2. "¥"キーで入力する文字"\"
       2. ABC 削除
+4. システム環境 > Dockとメニューバー
+   1. Dockを自動的に表示/非表示　`チェック`j
+   2. 時計　24時間表にする
+   3. Spotlight メニューバーに表示　`チェックはずす`
+   4. Siri メニューバーに表示　`チェックはずす`
 
-4. Homebrew
+5. Homebrew
    1. Install from site command
    2. `eval "$(/opt/homebrew/bin/brew shellenv)"`
    3. `brew bundle --file ~/.config/homnebrew/Brewfile`
-5. Docker
+6. Docker
    1. システム環境設定 > ユーザーとグループ > ログイン項目 `ターミナル`を追加
    2. `git clone https://github.com/arkbig/devbase.git proj/devbase`
    3. [compose Releases](https://github.com/docker/compose/releases)
@@ -45,15 +59,15 @@
       2. `docker compose help`してシステム環境設定 > セキュリティとプライバシー > 一般 > docker-composeをこのまま許可
       3. `ln -s ~/.config/docker .colima/docker`
       4. [devbase使用方法](https://zenn.dev/arkbig/books/devbase-2022_b1b24e6e8db350a1f7f379af3833e90d79ad5/viewer/conclusion)
-6. Terminal
+7. Terminal
    1. プロファイルを読み込む `~/.config/terminal/Big.terminal`
-7. OneDrive
+8. OneDrive
    1. Install from site download
 
-8. Chrome
+9.  Chrome
     1. Install from site download
 
-9.  VS Code
+10. VS Code
     1. Install from site download
     2. `shell command: install`
     3. `~/.config/vscode/install-extensions.sh`

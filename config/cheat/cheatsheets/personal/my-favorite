@@ -1,2 +1,38 @@
-# ok
+# Shortcuts
 
+基本
+移動> a-b-|-f-e, 単語 option+{b,f}
+選択> @ & xx
+削除> u-h-|-d-k, 単語 option+{h,d}
+中断> g, 画面クリア> l
+
+補完
+メニュー> Tab, 一致まで> option-i
+確定> Enter, 選択> j
+
+履歴
+前> p, 次> n, 連続> o
+検索実行> r, 検索選択> s
+最終引数> option+.
+
+その他
+特殊文字入力> option-q
+一つ大文字> option+c
+全大文字> option+u
+全小文字> option+d
+チートシート> option+? (option+shift+/)
+
+"^Y" yank
+"^_" undo
+
+"^X*" expand-word
+"^Xa" _expand_alias
+"^Xc" _correct_word
+"^Xm" _most_recent_file
+"^Xu" undo
+"^[A" accept-and-hold
+"^[Q" push-line
+
+zoxide
+j 履歴からcd
+ji インクリメンタルリンクcd
