@@ -31,6 +31,7 @@
          2. 他は`チェックはずす`
       5. 入力ソース　`チェックはずす`
       6. スクリーンショット　`チェックはずす`
+         1. スクリーンショットと収録のオプション `F13`(PrintScreen)
       7. サービス　`チェックはずす`
       8. Spotlight `Control + SP`
          1. 他は　`チェックはずす`
@@ -64,7 +65,7 @@
 8. OneDrive
    1. Install from site download
 
-9.  Chrome
+9. Chrome
     1. Install from site download
 
 10. VS Code

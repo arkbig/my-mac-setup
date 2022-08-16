@@ -49,7 +49,7 @@ disabled=false
 
 [status]
 disabled=false
-symbol="✘"
+symbol="✘ "
 style="fg:124"
 pipestatus=true
 

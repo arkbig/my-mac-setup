@@ -167,9 +167,22 @@ zle -N menu-complete-and-select
 # cheatを起動させる（未入力時はmy-favorite決め打ち）
 run-cheat() {
     if [ -z $BUFFER ]; then
-        cheat my-favorite
+        cheat my-favorite | bat --style=plain -l sh
     else
-        cheat $BUFFER
+        if [ "$BUFFER" != "${BUFFER#\\}" ]; then
+            # original command
+            local cmd=$(echo ${BUFFER#\\} | choose 0)
+        else
+            # Possible alias
+            local lbuf=$LBUFFER
+            local rbuf=$RBUFFER
+            BUFFER=$(echo $BUFFER | choose 0)
+            zle _expand_alias
+            local cmd=$(echo $BUFFER | choose 0)
+            LBUFFER=$lbuf
+            RBUFFER=$rbuf
+        fi
+        cheat $cmd | bat --style=plain -l sh
     fi
 }
 zle -N run-cheat
@@ -179,13 +192,13 @@ zle -N run-cheat
 
 # Tabはメニュー補完、option-iはbashっぽい補完（連番ファイル選択時に便利）
 bindkey '^i' menu-complete-and-select # Tab
-bindkey 'ˆ' expand-or-complete # options-i
+bindkey 'ˆ' expand-or-complete # option-i
 
 # 履歴操作
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
 bindkey '^r' accept-history
-bindkey '^s' select-history # TODO: menuselectの"^j"と"^m"みたいに確定キーで切り替えたい 
+bindkey '®' select-history # TODO: menuselectの"^j"と"^m"みたいに確定キーで切り替えたい 
 
 # optionをメタキーにせずそのままとし、特殊文字に必要なショートカットを割り当てる
 
@@ -193,7 +206,7 @@ bindkey '^s' select-history # TODO: menuselectの"^j"と"^m"みたいに確定�
 bindkey '∫' backward-word  # option-b
 bindkey 'ƒ' forward-word # option-f
 bindkey '∂' kill-word # option-d
-bindkey '˙' backward-kill-word # options-h
+bindkey '˙' backward-kill-word # option-h
 
 # 最後の引数を再利用
 bindkey '≥' insert-last-word # option-.
@@ -217,6 +230,7 @@ accept-line-anywhere() {
 }
 zle -N accept-line-anywhere
 bindkey -M menuselect '^m' accept-line-anywhere # 通常は確定、"^j"でバッファ挿入のみ
+bindkey -M menuselect '^[[Z' backward-char # shift-TABで戻る
 
 # option-bなどでいい感じに単語移動
 # less /usr/local/hoge <-- 通常は「最初の/」まで戻るが、これで「最後の/」に移動
