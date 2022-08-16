@@ -52,6 +52,41 @@ mkcd() {
 }
 
 ######################################################################
+# cd
+# cd記録数の設定
+DIRSTACKSIZE=50
+# cd検索パスの設定
+cdpath=~/proj
+# ディレクトリ名のみでもcd
+setopt auto_cd
+# cd時にpushをする
+setopt auto_pushd
+# pushに同じものを登録しない
+setopt pushd_ignore_dups
+
+# プロンプト表示時にディレクトリ内容をリストアップ
+zle-line-init() {
+    # TODO 色をつけたい（やり方不明）
+    # TODO いい感じにwrapさせたい（ただの手抜き）
+    local maxlen=$(echo $(( $COLUMNS * 2 )))
+    local all=$(lsd -1FL --icon never --group-dirs first)
+    local dirs=""
+    for d (${(f)all}) {
+        if [[ "$d" =~ "[ ]" ]]; then
+            dirs="$dirs '$d'"
+        else
+            dirs="$dirs $d"
+        fi
+        if [ ${#dirs} -gt $maxlen ]; then
+            dirs="${dirs:0:$maxlen-3}..."
+            break
+        fi
+    }
+    zle -M "$dirs"
+}
+zle -N zle-line-init
+
+######################################################################
 # history
 
 # 履歴保存数の設定
@@ -87,41 +122,6 @@ accept-history() {
     zle accept-line
 }
 zle -N accept-history
-
-######################################################################
-# cd
-# cd記録数の設定
-DIRSTACKSIZE=50
-# cd検索パスの設定
-cdpath=~/proj
-# ディレクトリ名のみでもcd
-setopt auto_cd
-# cd時にpushをする
-setopt auto_pushd
-# pushに同じものを登録しない
-setopt pushd_ignore_dups
-
-# プロンプト表示時にディレクトリ内容をリストアップ
-zle-line-init() {
-    # TODO 色をつけたい（やり方不明）
-    # TODO いい感じにwrapさせたい（ただの手抜き）
-    local maxlen=$(echo $(( $COLUMNS * 2 )))
-    local all=$(lsd -1FL --icon never --group-dirs first)
-    local dirs=""
-    for d (${(f)all}) {
-        if [[ "$d" =~ "[ ]" ]]; then
-            dirs="$dirs '$d'"
-        else
-            dirs="$dirs $d"
-        fi
-        if [ ${#dirs} -gt $maxlen ]; then
-            dirs="${dirs:0:$maxlen-3}..."
-            break
-        fi
-    }
-    zle -M "$dirs"
-}
-zle -N zle-line-init
 
 ######################################################################
 # completion
