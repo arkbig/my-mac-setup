@@ -30,6 +30,7 @@ alias ls='lsd -A --group-dirs=last'
 alias mkdir='mkdir -p'
 alias ps='procs --tree'
 alias rm='trash -F'
+alias time='gtime'
 alias top='btm'
 alias tree='lsd -A --tree --group-dirs=last'
 alias vi='kak'
@@ -199,6 +200,13 @@ bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
 bindkey '^r' accept-history
 bindkey '®' select-history # TODO: menuselectの"^j"と"^m"みたいに確定キーで切り替えたい 
+
+# Windows Like
+# Terminal.appのプロファイル > キーボードで追加が必要
+# Home(↖︎)→\033[H
+# End(↘︎)→\033[F
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
 
 # optionをメタキーにせずそのままとし、特殊文字に必要なショートカットを割り当てる
 
