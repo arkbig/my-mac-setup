@@ -9,7 +9,7 @@ command_timeout=1000 #ms
 format = """
 $directory[](fg:29 bg:24)\
 $git_branch$git_status[](fg:24 bg:60)\
-$time[](fg:60 bg:black)\
+$time[](fg:60 bg:none)\
 $fill [﬌](fg:239)$status$memory_usage$cmd_duration[﬋](fg:239)\
 $all"""
 
