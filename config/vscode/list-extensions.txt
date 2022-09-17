@@ -1,6 +1,7 @@
 bungcip.better-toml
 chrmarti.regex
 DavidAnson.vscode-markdownlint
+docsmsft.docs-markdown
 exiasr.hadolint
 foxundermoon.shell-format
 GrapeCity.gc-excelviewer
@@ -20,9 +21,11 @@ ms-vscode-remote.remote-wsl
 ms-vscode-remote.vscode-remote-extensionpack
 naumovs.color-highlight
 oderwat.indent-rainbow
+rust-lang.rust-analyzer
 sgryjp.japanese-word-handler
 shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
 timonwong.shellcheck
 usernamehw.errorlens
+yarimit.vscode-charcode-ext
 yzhang.markdown-all-in-one

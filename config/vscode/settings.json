@@ -12,11 +12,13 @@
         "aarch",
         "arkbig",
         "Brewfile",
+        "Crossterm",
         "devbase",
         "Dnsmasq",
         "eisuu",
         "errorlens",
         "esac",
+        "gtime",
         "hadolint",
         "homnebrew",
         "Karabiner",
@@ -41,5 +43,6 @@
     "workbench.tree.indent": 12,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.rightClickBehavior": "copyPaste",
-    "editor.renderWhitespace": "boundary"
+    "editor.renderWhitespace": "boundary",
+    "window.zoomLevel": 1
 }
