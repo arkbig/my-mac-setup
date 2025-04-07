@@ -1,0 +1,7 @@
+[user]
+name="big@work"
+email="big@work.local"
+
+[http "https://github.com/"]
+proxy=http://192.168.0.1:8080
+sslCAInfo=/home/big/ssl/certs/all_combined.pem
