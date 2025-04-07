@@ -7,7 +7,7 @@
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "editor.minimap.enabled": false,
-    "editor.fontFamily": "HackGen35Nerd, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "HackGen35Nerd, HackGen Console NF, Menlo, Monaco, 'Courier New', monospace",
     "cSpell.userWords": [
         "aarch",
         "arkbig",
@@ -38,11 +38,64 @@
         "Traefik",
         "udptunnel"
     ],
-    "markdown-preview-enhanced.previewTheme": "github-dark.css",
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 12,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.rightClickBehavior": "copyPaste",
     "editor.renderWhitespace": "boundary",
-    "window.zoomLevel": 1
+    "editor.inlineSuggest.enabled": true,
+    "terminal.integrated.profiles.windows": {
+        "zsh": {
+            "overrideName": true,
+            "path": "C:\\opt\\git\\bin\\bash.exe",
+            "args": [
+                "-c",
+                "zsh",
+                "--login"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "zsh",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "--header-insertion=never",
+        "--enable-config",
+        "--clang-tidy"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    "ruff.format.preview": true,
+    "editor.formatOnSave": true,
+    "editor.stickyScroll.enabled": true,
+    "shellformat.flag": "-bn",
+    "editor.accessibilitySupport": "off",
+    "markdown-preview-enhanced.plantumlServer": "https://plantuml-devbase.dev.test/svg/",
+    "python.terminal.activateEnvironment": false,
+    "indentRainbow.errorColor": "rgba(48,32,32,0.6)",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "files.insertFinalNewline": true,
+    "[csharp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    },
+    "git.closeDiffOnOperation": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "breadcrumbs.symbolSortOrder": "name",
+    "window.commandCenter": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "maptz.regionfolder": {
+        "[cpp]": {
+            "foldStartRegex": "#\\s*pragma region[\\s]*(.*)",
+            "foldEndRegex": "#\\s*pragma endregion"
+        }
+    }
 }
