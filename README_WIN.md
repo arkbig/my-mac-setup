@@ -106,6 +106,13 @@ Windows Terminalをインストールする。
 Everytingをインストールする。
 オプションのキー割当で、検索ウィンドウ表示キーに`Alt+Space`を設定する。
 
-## SSH鍵ペア作成
+## SSH
+
+鍵ペア作成
 
 `ssh-keygen -t ed25519`
+
+ssh-agent起動
+
+Windowsのオプション機能でOpenSSHを有効にする。
+サービスでOpenSSH Authentication Agentを起動する。

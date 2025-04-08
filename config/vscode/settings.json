@@ -97,5 +97,11 @@
             "foldStartRegex": "#\\s*pragma region[\\s]*(.*)",
             "foldEndRegex": "#\\s*pragma endregion"
         }
-    }
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "scminput": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": true
 }

@@ -117,7 +117,7 @@ zle-line-init() {
             dirs="$dirs $d"
         fi
         if [ ${#dirs} -gt $maxlen ]; then
-            dirs="${dirs:0:$maxlen-3}..."
+            dirs="${dirs:0:$maxlen-4}..."
             break
         fi
     }
