@@ -100,8 +100,9 @@
     },
     "github.copilot.enable": {
         "*": true,
+        "markdown": true,
         "plaintext": false,
         "scminput": false
     },
-    "github.copilot.nextEditSuggestions.enabled": true
+    "github.copilot.nextEditSuggestions.enabled": true,
 }

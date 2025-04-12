@@ -334,3 +334,11 @@ else
     ssh_id_file=$HOME/.ssh/id_ed25519
 fi
 source "$self_dir/ssh-add-key.sh" "$ssh_id_file"
+
+# .local
+if [ -e $HOME/.local/bin ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+if [ -e $HOME/.local/bin/env ]; then
+    . "$HOME/.local/bin/env"
+fi

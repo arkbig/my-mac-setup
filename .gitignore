@@ -1,2 +1,4 @@
 automatic_backups/
 config/cheat/cheatsheets/community/
+config/fish/conf.d/uv.env.fish
+config/uv/uv-receipt.json

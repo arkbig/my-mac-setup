@@ -49,11 +49,12 @@ direnvをインストールする。
 ```sh
 pacman -S \
     mingw-w64-x86_64-bat \
+    mingw-w64-x86_64-bottom \
     mingw-w64-x86_64-delta \
     mingw-w64-x86_64-dust \
-    mingw-w64-x86_64-ripgrep \
+    mingw-w64-x86_64-fzf \
     mingw-w64-x86_64-lsd \
-    mingw-w64-x86_64-bottom \
+    mingw-w64-x86_64-ripgrep \
     mingw-w64-x86_64-starship
 ```
 
