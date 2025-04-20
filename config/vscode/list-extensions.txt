@@ -51,7 +51,9 @@ sgryjp.japanese-word-handler
 shd101wyy.markdown-preview-enhanced
 shuworks.vscode-table-formatter
 streetsidesoftware.code-spell-checker
+tamasfe.even-better-toml
 timonwong.shellcheck
 usernamehw.errorlens
+vadimcn.vscode-lldb
 yarimit.vscode-charcode-ext
 yzhang.markdown-all-in-one

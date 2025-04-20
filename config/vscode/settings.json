@@ -6,6 +6,9 @@
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
+    "markdownlint.config": {
+        "MD024": false
+    },
     "editor.minimap.enabled": false,
     "editor.fontFamily": "HackGen35Nerd, HackGen Console NF, Menlo, Monaco, 'Courier New', monospace",
     "cSpell.userWords": [

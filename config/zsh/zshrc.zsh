@@ -42,6 +42,9 @@ alias .2=cd ../..
 alias .3=cd ../../..
 alias .4=cd ../../../..
 alias .5=cd ../../../../..
+if [ "$os" = "Windows" ]; then
+    alias beep='PowerShell -c "(New-Object Media.SoundPlayer $USERPROFILE\\Music\\beep.wav).PlaySync();"'
+fi
 alias cat='bat --paging=never'
 alias df='duf'
 alias diff='delta'
